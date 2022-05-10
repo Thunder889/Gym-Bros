@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gym Finder</title>
+    <link rel="icon" href="favicon(1).ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+        
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+        
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Acasă</a>
+            <a href="Abonamente.html" class="w3-bar-item w3-button w3-padding-large w3-white">Abonamente</a>
+            <a href="Despre.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Despre</a>
+
+        </div>
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Plan</a>
+
+        </div>
+    </div>
+
+    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">GYM BROS</h1>
+        <p class="w3-xlarge">Plan de afaceri al SC Gym Finder SRL</p>
+    </header>
+
+
+    </div>
+
+    <div id="pricing" style="padding-top: 40px;">
+        <div class="price_card alpha">
+            <div class="header">
+                <span class="price">200 RON</span>
+
+            </div>
+            <ul class="features">
+                <li>Indica gradul de aglomerare</li>
+                <li>Intrare gratuita la sute de săli de fitness din țara</li>
+                <li>Reviews si rankings actualizate permanent </li>
+                <li>100 de puncte săptămânal</li>
+                <li>Promoții pe baza punctelor</li>
+            </ul>
+            <a href="#" style="text-decoration: none;"><button>Cumpara</button></a>
+
+        </div>
+
+        <div class="price_card bravo">
+            <div class="header">
+                <span class="price">350 RON</span>
+
+            </div>
+            <ul class="features">
+                <li>Indica gradul de aglomerare</li>
+                <li>Intrare gratuita la sute de săli de fitness din țara</li>
+                <li>Reviews si rankings actualizate permanent </li>
+                <li>100 de puncte săptămânal</li>
+                <li>Promoții pe baza punctelor</li>
+                <li>20 de puncte bonus de fiecare data când mergi la sala </li>
+                <li>Invitații gratuite pentru prieteni</li>
+                <li>Ședință lunara gratuită cu un nutriționist de top</li>
+            </ul>
+            <button>CUMPARA</button>
+        </div>
+
+        <div class="price_card charlie">
+            <div class="header">
+                <span class="price">SOON</span>
+            </div>
+            <ul class="features">
+
+            </ul>
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="slideshow-container" style="padding: 50px;">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 2</div>
+                <img src="Photo/map1.png" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 2</div>
+                <img src="Photo/map2.png" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+    </footer>
+
+</body>
+
+</html>
